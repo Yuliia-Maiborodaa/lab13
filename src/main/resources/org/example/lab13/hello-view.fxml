@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.lab13.HelloController">
+    <top>
+        <VBox prefHeight="21.0" prefWidth="600.0" spacing="15.0" BorderPane.alignment="CENTER">
+            <MenuBar>
+                <Menu mnemonicParsing="false" text="File">
+                    <MenuItem fx:id="close" mnemonicParsing="false" onAction="#close" text="Exit" />
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                    <MenuItem mnemonicParsing="false" text="Delete" />
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                    <MenuItem fx:id="aboutMenuItem" mnemonicParsing="false" onAction="#onAboutMenuClick" text="About" />
+                </Menu>
+            </MenuBar>
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+        </VBox>
+    </top>
+    <center>
+        <HBox prefWidth="200.0" BorderPane.alignment="CENTER">
+                <VBox maxWidth="1.7976931348623157E308" prefWidth="0.0" spacing="15.0" HBox.hgrow="ALWAYS">
+                    <Label text="Завдання 13.1" textAlignment="CENTER">
+                        <font>
+                            <Font name="System Bold" size="18.0" />
+                        </font>
+                    </Label>
+                    <Label text="Табулювання функції:">
+                        <font>
+                            <Font size="14.0" />
+                        </font>
+                    </Label>
+                    <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                        <Image url="@../../../formula13_1.png" />
+                    </ImageView>
+                    <HBox prefWidth="400.0" spacing="10.0" VBox.vgrow="NEVER">
+                            <Label text="Start">
+                                <font>
+                                    <Font size="15.0" />
+                                </font></Label>
+                            <TextField fx:id="startField" prefWidth="35.0" />
+                            <Label text="End">
+                                <font>
+                                    <Font size="15.0" />
+                                </font></Label>
+                            <TextField fx:id="endField" prefWidth="35.0" />
+                            <Label text="Step">
+                                <font>
+                                    <Font size="15.0" />
+                                </font></Label>
+                            <TextField fx:id="stepField" prefWidth="35.0" />
+                            <Button fx:id="tabulation" alignment="TOP_LEFT" contentDisplay="CENTER" mnemonicParsing="false" onAction="#tabulation" text="Tabulation" />
+                    </HBox>
+                    <HBox prefWidth="200.0">
+                            <TableView fx:id="table" prefWidth="400.0" HBox.hgrow="NEVER">
+                                <columns>
+                                    <TableColumn maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="200.0" text="X" fx:id="xCol" />
+                                    <TableColumn fx:id="yCol" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="200.0" text="Y" />
+                                </columns>
+                                <HBox.margin>
+                                    <Insets />
+                                </HBox.margin>
+                            </TableView>
+                    </HBox>
+                    <padding>
+                        <Insets left="15.0" />
+                    </padding>
+                </VBox>
+                <VBox maxWidth="5.0" minWidth="5.0" prefWidth="5.0" style="-fx-background-color: gray; -fx-opacity: 0.4;" HBox.hgrow="NEVER" />
+                <VBox maxWidth="1.7976931348623157E308" prefWidth="0.0" HBox.hgrow="ALWAYS">
+                  <Label text="Завдання 13.2">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="Обчислення для функції:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="20.0" top="15.0" />
+                     </VBox.margin>
+                  </Label>
+                  <ImageView fitHeight="300.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
+                     <Image url="@../../../formula13_2.png" />
+                     <VBox.margin>
+                        <Insets left="20.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0">
+                        <Label contentDisplay="RIGHT" text="x =   ">
+                           <graphic>
+                              <TextField fx:id="xField" />
+                           </graphic>
+                           <VBox.margin>
+                              <Insets left="20.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label contentDisplay="RIGHT" text="n =   ">
+                           <graphic>
+                              <TextField fx:id="nField" />
+                           </graphic>
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="20.0" top="10.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label contentDisplay="RIGHT" text="eps =">
+                           <graphic>
+                              <TextField fx:id="epsField" />
+                           </graphic>
+                           <VBox.margin>
+                              <Insets left="20.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Button alignment="TOP_CENTER" mnemonicParsing="false" onAction="#calculate" text="Calculate">
+                           <VBox.margin>
+                              <Insets left="75.0" top="10.0" />
+                           </VBox.margin></Button>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </VBox>
+                  <Label fx:id="resultArea" style="-fx-border-color: gray;" text="Результат обчислення: ">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="20.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </padding></Label>
+                </VBox>
+
+        </HBox>
+    </center>
+</BorderPane>
