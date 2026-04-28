@@ -11,13 +11,10 @@
         <VBox prefHeight="21.0" prefWidth="600.0" spacing="15.0" BorderPane.alignment="CENTER">
             <MenuBar>
                 <Menu mnemonicParsing="false" text="File">
-                    <MenuItem fx:id="close" mnemonicParsing="false" onAction="#close" text="Exit" />
-                </Menu>
-                <Menu mnemonicParsing="false" text="Edit">
-                    <MenuItem mnemonicParsing="false" text="Delete" />
+                    <MenuItem mnemonicParsing="false" onAction="#close" text="Exit" />
                 </Menu>
                 <Menu mnemonicParsing="false" text="Help">
-                    <MenuItem fx:id="aboutMenuItem" mnemonicParsing="false" onAction="#onAboutMenuClick" text="About" />
+                    <MenuItem mnemonicParsing="false" onAction="#onAboutMenuClick" text="About" />
                 </Menu>
             </MenuBar>
             <opaqueInsets>

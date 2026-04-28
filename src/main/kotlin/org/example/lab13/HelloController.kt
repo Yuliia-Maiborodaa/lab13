@@ -1,7 +1,7 @@
 package org.example.lab13
 
+import javafx.application.Platform
 import javafx.collections.FXCollections
-import javafx.event.ActionEvent
 import javafx.fxml.FXML
 import javafx.fxml.FXMLLoader
 import javafx.scene.Parent
@@ -30,8 +30,8 @@ class HelloController {
     lateinit var resultArea: Label
 
 
-    fun close (event: ActionEvent){
-        javafx.application.Platform.exit()
+    fun close (){
+        Platform.exit()
     }
 
     fun onAboutMenuClick() {
