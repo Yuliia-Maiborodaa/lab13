@@ -4,19 +4,18 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" spacing="15.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.lab13.AboutController">
-   <children>
-      <Label text="Про програму " />
-      <TextArea fx:id="infoArea" editable="false" prefHeight="200.0" prefWidth="200.0" />
-      <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0">
-         <children>
-            <Button fx:id="saveToFile" alignment="CENTER" contentDisplay="BOTTOM" mnemonicParsing="false" onAction="#onSaveToFile" text="Зберегти у файл">
-               <HBox.margin>
-                  <Insets right="20.0" />
-               </HBox.margin>
-            </Button>
-            <Button fx:id="closeAbout" alignment="CENTER" mnemonicParsing="false" onAction="#closeAbout" text="Закрити" />
-         </children>
-      </HBox>
-   </children>
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+      prefHeight="400.0" prefWidth="600.0" spacing="15.0" xmlns="http://javafx.com/javafx/17.0.12"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.lab13.AboutController">
+   <Label text="Про програму "/>
+   <TextArea fx:id="infoArea" editable="false" prefHeight="200.0" prefWidth="200.0"/>
+   <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0">
+      <Button alignment="CENTER" contentDisplay="BOTTOM" mnemonicParsing="false"
+              onAction="#onSaveToFile" text="Зберегти у файл">
+         <HBox.margin>
+            <Insets right="20.0"/>
+         </HBox.margin>
+      </Button>
+      <Button fx:id="closeAbout" alignment="CENTER" mnemonicParsing="false" onAction="#closeAbout" text="Закрити"/>
+   </HBox>
 </VBox>
